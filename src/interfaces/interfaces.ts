@@ -5,7 +5,9 @@ export interface CustomError extends Error {
 
 export class HTTPError extends Error implements CustomError {
   constructor(
+    // eslint-disable-next-line no-unused-vars
     public statusCode: number,
+    // eslint-disable-next-line no-unused-vars
     public statusMessage: string,
     public message: string,
     public options?: ErrorOptions
