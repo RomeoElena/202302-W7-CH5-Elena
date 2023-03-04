@@ -4,7 +4,7 @@ import { _dirname } from './config.js';
 import morgan from 'morgan';
 import cors from 'cors';
 
-const debug = createDebug('W7B:app');
+const debug = createDebug('W7:app');
 
 export const app = express();
 app.disable('x-powered-by');
