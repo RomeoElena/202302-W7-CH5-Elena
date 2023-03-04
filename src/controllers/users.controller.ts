@@ -7,6 +7,7 @@ import { Auth, PayloadToken } from '../services/auth.js';
 const debug = createDebug('W7:controller:users');
 
 export class UsersController {
+  // eslint-disable-next-line no-unused-vars
   constructor(public repo: Repo<User>) {
     debug('Instantiate');
   }
@@ -66,17 +67,17 @@ export class UsersController {
     } catch (error) {
       next(error);
     }
+  }
 
-    // Llegan datos usuario en el Bo0dy
-
-    // Seach by email
-
-    // Si lo tengo -> crear el token
-
-    // Send el token
-
-    // Si no lo tengo
-
-    // Send erreor
+  async changeRelations(req: Request, resp: Response, next: NextFunction) {
+    try {
+      debug('changeRelations');
+      const data = await this.repo.update(req.body);
+      resp.json({
+        results: data,
+      });
+    } catch (error) {
+      next(error);
+    }
   }
 }
