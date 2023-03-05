@@ -32,5 +32,8 @@ app.use('/users', usersRouter);
 app.use('/', (_req, resp) => {
   resp.json({
     info: 'Challenge weekend RRSS',
+    endpoints: {
+      users: '/users',
+    },
   });
 });
