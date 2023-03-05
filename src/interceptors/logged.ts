@@ -3,7 +3,7 @@ import { HTTPError } from '../interfaces/interfaces.js';
 
 import createDebug from 'debug';
 import { Auth, PayloadToken } from '../services/auth.js';
-const debug = createDebug('W6:interceptor:logged');
+const debug = createDebug('W7:interceptor:logged');
 export interface RequestPlus extends Request {
   info?: PayloadToken;
 }
